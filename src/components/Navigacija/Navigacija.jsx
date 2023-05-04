@@ -18,7 +18,7 @@ function Navigacija(){
                     <Link to="/obavijesti" className={styles.link}>Obavijesti</Link>
                 </li>
                 <li className={styles.navLink}>
-                    <Link to="/popiszivotinja" className={styles.link}>Popis zivotinja</Link>
+                    <Link to="/popiszivotinja" className={styles.link}>Životinje</Link>
                 </li>
                 <li className={styles.navLink}>
                     <Link to="/unosnovihzivotinja" className={styles.link}>Unos Novih</Link>

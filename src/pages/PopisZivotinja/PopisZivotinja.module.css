@@ -1,0 +1,17 @@
+.popisZivotinja {
+    display: flex;
+    width: 100%;
+}
+.sideBar{
+    flex: 1;
+    border: 1px solid black;
+}
+.popis{
+    flex:4;
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}

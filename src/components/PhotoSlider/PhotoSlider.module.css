@@ -7,7 +7,7 @@
 .sliderStyles{
     height: 100%;
     position: relative;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .slideStyles {
     border: 1px solid black;
@@ -28,6 +28,10 @@
     color: #fff;
     z-index: 1;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.leftArrowStyles:hover {
+    transform: translateY(-50%) scale(1.2);
 }
 .rightArrowStyles {
     position: absolute;
@@ -38,6 +42,10 @@
     color: #fff;
     z-index: 1;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.rightArrowStyles:hover {
+    transform: translateY(-50%) scale(1.2);
 }
 
 .dotsContainerStyles{
@@ -49,5 +57,10 @@
     margin: 0 3px;
     cursor: pointer;
     font-size: 20px;
+    transition: transform 0.2s ease-in-out;
+
     /* color: #fff; */
+}
+.dotStyle:hover{
+    transform: translateY(-10%) scale(1.2);
 }
