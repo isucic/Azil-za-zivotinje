@@ -1,9 +1,9 @@
 import styles from './ModalEdit.module.css'
-export function EditTextInput({zivotinja,promjenaUlaza, name, type}){
+export function EditTextInput({zivotinja,promjenaUlaza, name, type, required}){
     return(
         <div className={styles.inputBox}>
             <label>{name}</label>
-            <input type={type} placeholder={zivotinja[name]} name={name} 
+            <input type={type} placeholder={zivotinja[name]} name={name} required={required}
              onFocus={(e) => {
                 if (name === "pregled") {
                   e.target.type = "date";

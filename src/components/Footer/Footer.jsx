@@ -8,7 +8,7 @@ function Footer(){
             <div className={fo.footerLeft}>
             <ul className={fo.footerLinks}>
                 <li>
-                    <Link to="/" className={fo.footerLink}>Opci Podaci</Link>
+                    <Link to="/" className={fo.footerLink}>Početna</Link>
                 </li>
                 <li>
                     <Link to="/donacije" className={fo.footerLink}>Donacije</Link>

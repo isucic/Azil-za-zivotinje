@@ -20,6 +20,7 @@ h1 {
 .pages {
   margin: 0 150px;
   display: flex;
+  /* border: 1px solid black; */
 }
 
 .footer {

@@ -42,7 +42,7 @@
     {
       "id": 1,
       "ime": "Garfield",
-      "vrsta": "mačka",
+      "vrsta": "Mačka",
       "photo": "https://paradepets.com/.image/t_share/MTkxMzY1Nzg4NjczMzIwNTQ2/cutest-dog-breeds-jpg.jpg",
       "cip": false,
       "godine": 44,
@@ -53,7 +53,7 @@
     {
       "id": 2,
       "ime": "Lori",
-      "vrsta": "mačka",
+      "vrsta": "Mačka",
       "photo": "https://images.squarespace-cdn.com/content/v1/5ca7884cc46f6d78a80f81ab/1612206764757-WYI3KFLNNKQ2M8KOJ12X/image-asset.jpeg?format=2500w",
       "cip": true,
       "godine": "3",
@@ -64,7 +64,7 @@
     {
       "id": 3,
       "ime": "Zorro",
-      "vrsta": "pas",
+      "vrsta": "Pas",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR-GZRzmK4TH0YOPxIWjcgG0MEqfyvbxYfVg&usqp=CAU",
       "cip": true,
       "godine": 50,
@@ -75,7 +75,7 @@
     {
       "id": 4,
       "ime": "Bella",
-      "vrsta": "mačka",
+      "vrsta": "Mačka",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILEXvG94WsWCzo4uogXqnXoNUvxJSmIh_4Q&usqp=CAU",
       "cip": true,
       "godine": 50,
@@ -86,13 +86,51 @@
     {
       "id": 5,
       "ime": "Lu",
-      "vrsta": "pas",
+      "vrsta": "Pas",
       "photo": "https://www.rd.com/wp-content/uploads/2017/11/05-amazon-9-Powerful-Ways-to-Give-to-Charity-Without-Breaking-the-Bank_527124532-Pongsatorn-Singnoy.jpg",
       "cip": true,
       "godine": 50,
       "opis": "Voli spavati",
       "pregled": "2000-02-13",
       "udomljen": true
+    },
+    {
+      "ime": "Asi",
+      "vrsta": "",
+      "photo": "https://media.glamour.com/photos/56959a2293ef4b09520d6393/master/w_1600%2Cc_limit/home-2015-10-8-cute-shelter-dogs-delaware-1023-courtesy-petfinder-main.jpg",
+      "cip": true,
+      "godine": "",
+      "opis": "Jako vesela i razigrana",
+      "pregled": "2023-03-24",
+      "udomljen": false,
+      "id": 6
+    },
+    {
+      "ime": "Loki",
+      "vrsta": "",
+      "photo": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA15Id3X.img?h=630&w=1200&m=6&q=60&o=t&l=f&f=jpg",
+      "cip": false,
+      "godine": "4",
+      "opis": "Treba puno pažnje. ",
+      "pregled": "",
+      "udomljen": true,
+      "id": 7
+    },
+    {
+      "ime": "Lada, Vihor i Lobel",
+      "vrsta": "",
+      "photo": "https://hips.hearstapps.com/hmg-prod/images/kittens-sitting-in-cage-at-animal-shelter-royalty-free-image-1589830343.jpg",
+      "cip": false,
+      "godine": "",
+      "opis": "Pronađeni na području Strobreča. Potreban privremeni dom.",
+      "pregled": "2023-04-03",
+      "udomljen": false,
+      "id": 8
     }
+  ],
+  "vrste": [
+    "Mačka",
+    "Pas",
+    "Ostalo"
   ]
 }
