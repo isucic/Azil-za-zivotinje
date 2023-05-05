@@ -1,5 +1,7 @@
 import axios from 'axios'
+import { useState } from 'react'
 import styles from './ZivotinjaCard.module.css'
+import ModalEdit from '../ModalEdit/ModalEdit'
 
 function ZivotinjaCard({zivotinja, setUpdate}){
     
@@ -9,6 +11,8 @@ function ZivotinjaCard({zivotinja, setUpdate}){
     var opis = zivotinja.opis
     var photo = zivotinja.photo
     var id = zivotinja.id
+
+    const [openModal, setOpenModal] = useState(false);
 
     function handleUdomiBotun(id){
         axios
@@ -36,7 +40,8 @@ function ZivotinjaCard({zivotinja, setUpdate}){
             <p className={styles.opis}>{opis}</p>
 
             <div className={styles.botuni}>
-                <button className={styles.uredibtn}>Uredi</button>
+                <button className={styles.uredibtn} onClick={() => setOpenModal(true)}>Uredi</button>
+                <ModalEdit zivotinja={zivotinja} open={openModal} onClose={() => setOpenModal(false)} setUpdate={setUpdate}/>
                 {!udomljen && 
                 <button onClick={() => handleUdomiBotun(id)} className={styles.udomibtn}>Udomi</button>}
                 

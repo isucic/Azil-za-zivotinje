@@ -1,9 +1,10 @@
 import axios from 'axios'
 import styles from './PopisZivotinja.module.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, createContext } from 'react'
 import ZivotinjaCard from '../../components/ZivotinjaCard/ZivotinjaCard'
 import Filters from '../../components/Filters/Filters'
 
+export const UpdateList = createContext({})
 function PopisZivotinja(){
 
     const vrsta = [
@@ -18,34 +19,28 @@ function PopisZivotinja(){
 
     const [zivotinje,setZivotinje] = useState([])
     const [update,setUpdate] = useState(false)
+    const [ispis,setIspis] = useState([])
 
     useEffect(() => {
-        axios
-         .get("http://localhost:3001/zivotinje")
-         .then(res => setZivotinje(res.data))
-         setUpdate(false)
+            axios
+            .get("http://localhost:3001/zivotinje")
+            .then(res => {setZivotinje(res.data);setIspis(res.data)})
+            setUpdate(false)
     },[update])
 
-    // function saljiFiltriranu(filtrirana){
-    //     setFilter(filtrirana)
-    //     console.log(filtrirana)
-    // }
+    const [filterData,setFilterData] = useState()
+    
+    const filteredDataFun = (filterData) => {
+        setFilterData(filterData)
+        setIspis(filterData)
+        if(!filterData) setIspis(zivotinje)
+    }
 
     return(
         <div className={styles.popisZivotinja}>
             <div className={styles.sideBar}>
-                <Filters zivotinje={zivotinje} />
+                <Filters zivotinje={zivotinje} filteredDataFun={filteredDataFun}/>
                 {/* <h2>Filteri</h2>
-
-                <div className={styles.filteri}>
-                    <h3>Vrsta</h3>
-                    {vrsta.map((v,index) => (
-                        <div className={styles.filter} key={v.id}>
-                         <input type="radio" name="filters" value={v.ime} onChange={() => handleChangeFilter(v.ime)}/>
-                         <label>{v.ime}</label>
-                        </div>
-                    ))} 
-                </div>
 
                 <div className={styles.filteri}>
                     <h3>Status</h3>
@@ -60,7 +55,7 @@ function PopisZivotinja(){
 
 
             <div className={styles.popis}>
-                {zivotinje.map(zivotinja => (
+                {ispis.map(zivotinja => ( 
                     <ZivotinjaCard zivotinja={zivotinja} key={zivotinja.id} setUpdate={setUpdate} />
                 ))}
 

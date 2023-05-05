@@ -1,9 +1,8 @@
 import styles from './Filters.module.css'
 import { useState } from 'react'
-function Filters({zivotinje}){
+function Filters({zivotinje, filteredDataFun}){
 
     const vrsta = [
-        {ime: "sve", id:1},
         {ime: "mačka", id:2},
         {ime: "pas", id:3},
     ]
@@ -13,13 +12,20 @@ function Filters({zivotinje}){
         {naziv: "svi", id: 3},
     ]
 
-
     const [filter,setFilter] = useState("")
-    const handleChangeFilter = (e) => {
-        setFilter(e.target.value)
+    const handlePretrazi = (e) => {
         var filteredData = zivotinje.filter(zivotinja => zivotinja.vrsta === filter)
         console.log(filteredData)
-        // saljiFiltriranu(filteredData)
+        filteredDataFun(filteredData)
+        if(filteredData){
+            setRemoveFilter(true)
+        }
+    }
+    const[removeFilter,setRemoveFilter] = useState(false)
+    function handleRemoveFilter(){
+        setFilter('')
+        setRemoveFilter(false)
+        filteredDataFun(null)
     }
     return(
             <>
@@ -27,12 +33,20 @@ function Filters({zivotinje}){
 
                 <div className={styles.filteri}>
                     <h3>Vrsta</h3>
-                    {vrsta.map((v,index) => (
+                    {vrsta.map(v => (
                         <div className={styles.filter} key={v.id}>
-                         <input type="radio" name="filters" value={v.ime} onChange={handleChangeFilter}/>
-                         <label>{v.ime}</label>
+                            <input 
+                            type="radio" 
+                            name="filters" 
+                            value={v.ime} 
+                            onChange={(e) => setFilter(e.target.value)}
+                            />
+                            <label>{v.ime}</label>
                         </div>
                     ))} 
+                    <button onClick={handlePretrazi}>Pretraži</button>
+                    {removeFilter && <button className={styles.filterClickBtn} onClick={handleRemoveFilter}>Ukloni filter</button>}
+
                 </div>
 
                 {/* <div className={styles.filteri}>

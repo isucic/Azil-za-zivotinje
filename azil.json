@@ -47,21 +47,19 @@
       "cip": false,
       "godine": 44,
       "opis": "Voli lazanje",
-      "pregled": "2022-09-23",
-      "udomljen": true,
-      "true": ""
+      "pregled": "29-3-2023",
+      "udomljen": true
     },
     {
       "id": 2,
-      "ime": "Snoopy",
-      "vrsta": "pas",
+      "ime": "Lori",
+      "vrsta": "mačka",
       "photo": "https://images.squarespace-cdn.com/content/v1/5ca7884cc46f6d78a80f81ab/1612206764757-WYI3KFLNNKQ2M8KOJ12X/image-asset.jpeg?format=2500w",
       "cip": true,
-      "godine": 50,
+      "godine": "3",
       "opis": "Više od običnog psa",
-      "pregled": "2000-02-13",
-      "udomljen": false,
-      "true": ""
+      "pregled": "2023-03-09",
+      "udomljen": false
     },
     {
       "id": 3,
@@ -72,8 +70,7 @@
       "godine": 50,
       "opis": "Voli spavati",
       "pregled": "2000-02-13",
-      "udomljen": true,
-      "true": ""
+      "udomljen": true
     },
     {
       "id": 4,
@@ -82,10 +79,9 @@
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILEXvG94WsWCzo4uogXqnXoNUvxJSmIh_4Q&usqp=CAU",
       "cip": true,
       "godine": 50,
-      "opis": "Voli spavati",
+      "opis": "Slatkica",
       "pregled": "2000-02-13",
-      "udomljen": false,
-      "true": ""
+      "udomljen": false
     },
     {
       "id": 5,
@@ -96,8 +92,7 @@
       "godine": 50,
       "opis": "Voli spavati",
       "pregled": "2000-02-13",
-      "udomljen": true,
-      "true": ""
+      "udomljen": true
     }
   ]
 }
