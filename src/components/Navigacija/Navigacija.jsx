@@ -33,7 +33,7 @@ function Navigacija({action}){
 
             <div className={styles.navbarLogin}>
                 {/* <Link to="/" className={styles.login}>Login</Link> */}
-                {user ? (<p>Admin</p>) : (<p>Korisnik</p>)}
+                <p>Admin</p>
                 <Toggle onChange={action}/>
             </div>
             

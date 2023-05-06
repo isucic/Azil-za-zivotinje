@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import OpciPodaci from './pages/OpciPodaci/OpciPodaci'
-import Donacije from './pages/Donacije'
+import Donacije from './pages/Donacije/Donacije'
 import Obavijesti from './pages/Obavijesti'
 import PopisZivotinja from './pages/PopisZivotinja/PopisZivotinja'
 import UnosNoveZivotinje from './pages/UnosNoveZivotinje/UnosNoveZivotinje'

@@ -36,6 +36,13 @@
       "tip": "Ostalo",
       "vrijednost": 25,
       "opis": "Kavez za srednje papige"
+    },
+    {
+      "id": 4,
+      "kategorija": "trazi",
+      "tip": "Veterinar",
+      "vrijednost": 30,
+      "opis": "Cjepivo"
     }
   ],
   "zivotinje": [
@@ -132,5 +139,11 @@
     "Mačka",
     "Pas",
     "Ostalo"
+  ],
+  "tipDonacija": [
+    "Hrana",
+    "Igračka",
+    "Lijekovi",
+    "Veterinar"
   ]
 }
