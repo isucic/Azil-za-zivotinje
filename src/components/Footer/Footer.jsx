@@ -1,8 +1,12 @@
 import fo from './Footer.module.css'
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram } from 'react-icons/fa'
+import userContext from '../../context/userContext';
+import { useContext } from 'react';
 
 function Footer(){
+
+    const user = useContext(userContext)
     return(
         <div className={fo.footer}>
             <div className={fo.footerLeft}>
@@ -19,6 +23,11 @@ function Footer(){
                 <li>
                     <Link to="/popiszivotinja" className={fo.footerLink}>Životinje</Link>
                 </li>
+                {user && 
+                <li>
+                    <Link to="/unosnovezivotinje" className={fo.footerLink}>Unesi novu</Link>
+                </li>
+                }
             </ul>
             <p>Company Name</p>
             </div>

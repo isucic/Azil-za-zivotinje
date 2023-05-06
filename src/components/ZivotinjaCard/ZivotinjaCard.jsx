@@ -1,9 +1,12 @@
 import axios from 'axios'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import styles from './ZivotinjaCard.module.css'
 import ModalEdit from '../ModalEdit/ModalEdit'
+import userContext from "../../context/userContext"
 
 function ZivotinjaCard({zivotinja, setUpdate}){
+
+    const user = useContext(userContext)
     
     var ime = zivotinja.ime
     var vrsta = zivotinja.vrsta
@@ -22,10 +25,11 @@ function ZivotinjaCard({zivotinja, setUpdate}){
          setUpdate(true)
     }
 
-    const backgroundColor = udomljen ? "#F7E1AE" : "#A4D0A4"
+    const backgroundColor = udomljen ? "transparent" : "#f1c0c0"
+    const border = udomljen ? "none" : "6px double red"
 
     return(
-        <div className={styles.zivotinjaCard} style={{ backgroundColor }}>
+        <div className={styles.zivotinjaCard} style={{ backgroundColor, border }}>
             <p className={styles.ime}>{ime}</p>
 
             <div className={styles.photoFrame}>
@@ -40,10 +44,13 @@ function ZivotinjaCard({zivotinja, setUpdate}){
             <p className={styles.opis}>{opis}</p>
 
             <div className={styles.botuni}>
-                <button className={styles.uredibtn} onClick={() => setOpenModal(true)}>Uredi</button>
                 <ModalEdit zivotinja={zivotinja} open={openModal} onClose={() => setOpenModal(false)} setUpdate={setUpdate}/>
                 {!udomljen && 
                 <button onClick={() => handleUdomiBotun(id)} className={styles.udomibtn}>Udomi</button>}
+                {user && 
+                <button className={styles.uredibtn} onClick={() => setOpenModal(true)}>Uredi</button>
+                }
+               
                 
             </div>
 

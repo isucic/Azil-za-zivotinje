@@ -81,7 +81,7 @@
       "godine": 50,
       "opis": "Slatkica",
       "pregled": "2000-02-13",
-      "udomljen": false
+      "udomljen": true
     },
     {
       "id": 5,
@@ -102,7 +102,7 @@
       "godine": "",
       "opis": "Jako vesela i razigrana",
       "pregled": "2023-03-24",
-      "udomljen": false,
+      "udomljen": true,
       "id": 6
     },
     {

@@ -7,12 +7,20 @@ import PopisZivotinja from './pages/PopisZivotinja/PopisZivotinja'
 import UnosNoveZivotinje from './pages/UnosNoveZivotinje/UnosNoveZivotinje'
 import Navigacija from './components/Navigacija/Navigacija'
 import Footer from './components/Footer/Footer'
+import userContext from './context/userContext'
+import { useState } from 'react'
 
 function App() {
 
+  const [user,setUser] = useState(false)
+  const handleUserChange = (e) => {
+    setUser(e.target.checked)
+  }
+
   return (
     <div className="App">
-      <Navigacija />
+      <userContext.Provider value={user} >
+      <Navigacija action={handleUserChange}/>
       
       <div className="pages">
       <Routes>
@@ -20,13 +28,14 @@ function App() {
         <Route path="/donacije" element={<Donacije />} />
         <Route path="/obavijesti" element={<Obavijesti />} />
         <Route path="/zivotinje" element={<PopisZivotinja />} />
-        <Route path="/unosnovihzivotinja" element={<UnosNoveZivotinje />} />
+        <Route path="/unosnovezivotinje" element={user ? <UnosNoveZivotinje /> : <p>Niste ovlašteni za ovu pristup stranici</p>} />
       </Routes>
       </div>
 
       <div className="footer">
         <Footer />
       </div>
+      </userContext.Provider>
     </div>
   )
 }
