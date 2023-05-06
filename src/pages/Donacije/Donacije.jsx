@@ -5,28 +5,39 @@ import FormDonacija from './FormDonacija'
 import DonacijaTable from './DonacijaTable'
 
 function Donacije(){
+
+    const [novaDonacija,setNovaDonacija] = useState(false)
+    const [refresh, setRefresh] = useState(true)
+
+    const [donacije,setDonacije] = useState([])
+    useEffect(() => {
+        if(refresh){
+        axios
+         .get("http://localhost:3001/donacije")
+         .then(res => setDonacije(res.data))
+         setRefresh(false)
+        }
+    },[refresh])
+
     return (
+
         <div className={styles.donacije}>
 
             <div className={styles.sideBarDon}>
-                <p>Sa strane</p>
-
-                <form>
-                    {/* <FormDonacija /> */}
-                </form>
+                {novaDonacija && <FormDonacija setRefresh={setRefresh}/> }
             </div>
 
             <div className={styles.popisVrstaDonacija}>
-                <button>Nova donacija</button>
+                <button onClick={() => setNovaDonacija(true)}>Nova donacija</button>
 
                 <h1>Tražimo</h1>             
-                <DonacijaTable kateg="trazi"/>
+                <DonacijaTable donacije={donacije} kateg="trazi" />
                    
                 <h1>Nudi se</h1>
-                <DonacijaTable kateg="nudi"/>
+                <DonacijaTable donacije={donacije} kateg="nudi"/>
 
                 <h1>Donirano</h1>
-                <DonacijaTable kateg="donirano" />
+                <DonacijaTable donacije={donacije} kateg="donirano" />
             </div>
         </div>
     )

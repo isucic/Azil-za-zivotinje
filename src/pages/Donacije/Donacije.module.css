@@ -1,15 +1,20 @@
 .donacije {
     display: flex;
     width: 100%;
-    border: 1px solid black;
+    margin-top: 20px;
+    /* border: 1px solid black; */
 }
 .sideBarDon{
     flex:1;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+.donacije select, .donacije input, .donacije textarea {
+    width: 70%;
+    margin-bottom: 10px;
 }
 .popisVrstaDonacija {
     flex:4;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 table {

@@ -1,16 +1,10 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import styles from './Donacije.module.css'
+import userContext from "../../context/userContext";
 
-function DonacijeTable({kateg}){
+function DonacijeTable({donacije, kateg}){
 
-    const [donacije,setDonacije] = useState([]);
-    useEffect(() => {
-        axios
-         .get("http://localhost:3001/donacije")
-         .then(res => setDonacije(res.data))
-    },[])
-
+    const user = useContext(userContext)
     return(
         <table>
             <thead>
@@ -27,7 +21,19 @@ function DonacijeTable({kateg}){
                     <td>{donacija.tip}</td>
                     <td>{donacija.vrijednost}</td>
                     <td>{donacija.opis}</td>
-                    <td><button>Doniraj</button></td>
+
+                    {/* U tablici Traži, samo korisnik vidi botun Doniraj */}
+                    {!user && kateg=="trazi" && <td><button>Doniraj</button></td>}
+                    {/* U tablici Nudi, samo admin vidi botun Prihvati */}
+                    {user && kateg=="nudi" && <td><button>Prihvati</button></td>}
+
+                    {/* U tablici donirano, samo admin ima pravo na botun Ponovi i izbrisi */}
+                    {user && kateg=="donirano" && 
+                    <td>
+                        <button>Ponovi</button>
+                        <button>Izbrisi</button>
+                    </td>}
+
                </tr>
                 ))}
             </tbody>
