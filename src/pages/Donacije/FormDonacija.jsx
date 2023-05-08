@@ -3,7 +3,6 @@ import { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import userContext from '../../context/userContext'
 
-
 function FormDonacija({setRefresh}){
 
     const user = useContext(userContext)
@@ -35,8 +34,8 @@ function FormDonacija({setRefresh}){
             headers: {
                 'content-type': "application/json"
             }
-        })   
-        setRefresh(true)    
+        })
+         .then(res => setRefresh(true))   
     }
     return(
         <form onSubmit={handleSpremiDonaciju}>

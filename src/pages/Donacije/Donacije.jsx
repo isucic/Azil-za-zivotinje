@@ -31,13 +31,13 @@ function Donacije(){
                 <button onClick={() => setNovaDonacija(true)}>Nova donacija</button>
 
                 <h1>Tražimo</h1>             
-                <DonacijaTable donacije={donacije} kateg="trazi" />
+                <DonacijaTable donacije={donacije} kateg="trazi" setRefresh={setRefresh} />
                    
                 <h1>Nudi se</h1>
-                <DonacijaTable donacije={donacije} kateg="nudi"/>
+                <DonacijaTable donacije={donacije} kateg="nudi" setRefresh={setRefresh}/>
 
                 <h1>Donirano</h1>
-                <DonacijaTable donacije={donacije} kateg="donirano" />
+                <DonacijaTable donacije={donacije} kateg="donirano" setRefresh={setRefresh}/>
             </div>
         </div>
     )

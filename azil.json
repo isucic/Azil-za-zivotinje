@@ -18,21 +18,21 @@
   "donacije": [
     {
       "id": 1,
-      "kategorija": "donirano",
+      "kategorija": "trazi",
       "tip": "Hrana",
       "vrijednost": 25,
       "opis": "Suha hrana za pse - 10kg"
     },
     {
       "id": 2,
-      "kategorija": "trazi",
+      "kategorija": "donirano",
       "tip": "Igračke",
       "vrijednost": 15,
       "opis": "Grebalica za mačke"
     },
     {
       "id": 3,
-      "kategorija": "nudi",
+      "kategorija": "donirano",
       "tip": "Ostalo",
       "vrijednost": 25,
       "opis": "Kavez za srednje papige"
@@ -43,6 +43,20 @@
       "tip": "Veterinar",
       "vrijednost": 30,
       "opis": "Cjepivo"
+    },
+    {
+      "tip": "Igračke",
+      "vrijednost": 15,
+      "opis": "Grebalica za mačke",
+      "kategorija": "nudi",
+      "id": 8
+    },
+    {
+      "kategorija": "nudi",
+      "tip": "Igračka",
+      "vrijednost": "8",
+      "opis": "Dvostruki konop",
+      "id": 9
     }
   ],
   "zivotinje": [
