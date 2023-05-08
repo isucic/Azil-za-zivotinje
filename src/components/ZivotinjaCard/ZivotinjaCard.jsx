@@ -21,15 +21,14 @@ function ZivotinjaCard({zivotinja, setUpdate}){
         axios
          .patch(`http://localhost:3001/zivotinje/${id}`, {
             udomljen: true})
-         .then(res => console.log("ispunjeno"))
-         setUpdate(true)
+         .then(res => setUpdate(true))
+         
     }
 
     const backgroundColor = udomljen ? "transparent" : "#f1c0c0"
-    const border = udomljen ? "none" : "6px double red"
 
     return(
-        <div className={styles.zivotinjaCard} style={{ backgroundColor, border }}>
+        <div className={styles.zivotinjaCard} style={{ backgroundColor }}>
             <p className={styles.ime}>{ime}</p>
 
             <div className={styles.photoFrame}>
@@ -38,7 +37,7 @@ function ZivotinjaCard({zivotinja, setUpdate}){
 
             <div className={styles.vrstaStatus}>
                 <p>{vrsta}</p>
-                {udomljen ? <p>Udomljen</p> : <p>Nije udomljen</p>}
+                {udomljen ? <p className={styles.status}>Udomljen</p> : <p className={styles.status}>Nije udomljen</p>}
             </div>
 
             <p className={styles.opis}>{opis}</p>
@@ -49,13 +48,9 @@ function ZivotinjaCard({zivotinja, setUpdate}){
                 <button onClick={() => handleUdomiBotun(id)} className={styles.udomibtn}>Udomi</button>}
                 {user && 
                 <button className={styles.uredibtn} onClick={() => setOpenModal(true)}>Uredi</button>
-                }
-               
-                
+                }                
             </div>
-
-
-            </div>
+        </div>
     )
 }
 

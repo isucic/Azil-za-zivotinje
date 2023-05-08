@@ -1,7 +1,7 @@
 import styles from './ModalEdit.module.css'
 import { useState, useContext } from 'react';
 import axios from 'axios';
-import {EditSelectInput, EditTextInput} from './EditInput';
+import {EditSelectInput, EditTextInput, EditCheckbox} from './EditInput';
 
 function ModalEdit({open, onClose,zivotinja}){  
 
@@ -9,30 +9,35 @@ function ModalEdit({open, onClose,zivotinja}){
     function promjenaUlaza(event){
         var { name, value } = event.target
         setUpdatedData({...updatedData,[name]: value})
-        console.log("uslo")
         console.log(updatedData);
     }
+
+   function promjenaCheckboxa(event){
+        // console.log(event.target.checked)
+        // console.log(event.target.name)
+        var { name, checked } = event.target
+        setUpdatedData({...updatedData,[name]: checked})
+   }
 
     const handleSaveButton = (e) => {
         // e.preventDefault();
         axios
          .patch(`http://localhost:3001/zivotinje/${zivotinja.id}`, updatedData)
          .then(res => console.log(res.data))
-         console.log("nista")
          setUpdate(true);
     }
 
     const vrstaLista = [
-        {naziv: "mačka", id:2},
-        {naziv: "pas", id:3},
+        {naziv: "Mačka", id:2},
+        {naziv: "Pas", id:3},
     ]
     const status = [
-        {naziv: "udomljen", id: 1},
-        {naziv: "nije udomljen", id: 2},
+        {naziv: "Udomljen", id: 1},
+        {naziv: "Nije udomljen", id: 2},
     ]
     const cipiran = [
-        {naziv: "cipiran", id: 1},
-        {naziv: "nije cipiran", id: 2},
+        {naziv: "Cipiran", id: 1},
+        {naziv: "Nije cipiran", id: 2},
     ]
 
     if (!open) return null;
@@ -51,9 +56,9 @@ function ModalEdit({open, onClose,zivotinja}){
                             <EditTextInput zivotinja={zivotinja} promjenaUlaza={promjenaUlaza} name="ime" type="text"/>
                             <EditTextInput zivotinja={zivotinja} promjenaUlaza={promjenaUlaza} name="godine" type="number"/>
                             <EditSelectInput zivotinja={zivotinja} promjenaUlaza={promjenaUlaza} name="vrsta" lista={vrstaLista}/>
-                            <EditSelectInput zivotinja={zivotinja} promjenaUlaza={promjenaUlaza} name="status" lista={status}/>
+                            <EditCheckbox zivotinja={zivotinja} promjenaUlaza={promjenaCheckboxa} name="udomljen" />
                             <EditTextInput zivotinja={zivotinja} promjenaUlaza={promjenaUlaza} name="pregled" type="text"/>
-                            <EditSelectInput zivotinja={zivotinja} promjenaUlaza={promjenaUlaza} name="cip" lista={cipiran}/>
+                            <EditCheckbox zivotinja={zivotinja} promjenaUlaza={promjenaCheckboxa} name="cip" />
                         </div>
 
                         <div className={styles.textBox}>

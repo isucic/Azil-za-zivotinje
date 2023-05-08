@@ -1,5 +1,4 @@
 import styles from './Filters.module.css'
-import { useState } from 'react'
 function Filters({vratiUParent, vratiStatus}){
 
     const vrsta = [
@@ -10,9 +9,6 @@ function Filters({vratiUParent, vratiStatus}){
         {naziv: "udomljen", id: 1},
         {naziv: "nije udomljen", id: 2}
     ]
-
-    const [filter,setFilter] = useState("")
-
     return(
             <>
                 <h2>Filteri</h2>
@@ -21,14 +17,12 @@ function Filters({vratiUParent, vratiStatus}){
                     <h3>Vrsta</h3>
                     {vrsta.map(v => (
                         <div className={styles.filter} key={v.id}>
-                            <label>{v.ime}</label>
+                            <label htmlFor="vrsta">{v.ime}</label>
                             <input 
                             type="radio" 
-                            name="filter" 
-                            // checked={v.ime === e.target.value}
+                            name="vrsta" 
                             value={v.ime} 
                             onChange={(e) => vratiUParent(e.target.value)}
-                            
                             />
                         </div>
                     ))} 
@@ -38,10 +32,10 @@ function Filters({vratiUParent, vratiStatus}){
                     <h3>Status</h3>
                     {status.map((v,index) => (
                         <div className={styles.filter} key={v.id}>
-                            <label>{v.naziv}</label>
+                            <label htmlFor="status">{v.naziv}</label>
                             <input 
                             type="radio" 
-                            name="filters" 
+                            name="status" 
                             value={v.naziv} 
                             onChange={(e) => vratiStatus(e.target.value)}/>
                         </div>

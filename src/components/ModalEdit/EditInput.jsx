@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styles from './ModalEdit.module.css'
 export function EditTextInput({zivotinja,promjenaUlaza, name, type, required}){
     return(
@@ -21,9 +22,8 @@ export function EditSelectInput({zivotinja, promjenaUlaza, name, lista}){
             <label>{name}</label>
              <select
                     name={name}
-                    value={zivotinja.name}
+                    value={zivotinja[name]}
                     onChange={promjenaUlaza}
-                    required
                     >
                     {lista.map(lis => (
                         <option key={lis.naziv} value={lis.naziv}>
@@ -31,6 +31,18 @@ export function EditSelectInput({zivotinja, promjenaUlaza, name, lista}){
                         </option>
                     ))}
             </select>
+        </div>
+    )
+}
+
+export function EditCheckbox({zivotinja,promjenaUlaza,name}){
+    return(
+        <div className={styles.selectBox}>
+            <div className={styles.checkbox}>
+                <label>{name}</label>
+                <input type="checkbox" defaultChecked={zivotinja[name]} name={name} onChange={promjenaUlaza} />
+            </div>
+  
         </div>
     )
 }

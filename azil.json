@@ -21,7 +21,6 @@
       "tekst": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus mauris metus, vulputate vulputate neque blandit quis. Nunc ultrices diam ligula, nec commodo purus ullamcorper id. Donec aliquet libero eu tincidunt eleifend. Duis ornare tincidunt nisl quis fringilla. Curabitur bibendum metus mauris, in bibendum lectus vestibulum tristique. Sed in nibh facilisis tortor varius euismod at et lectus. In non congue elit. Donec blandit est consequat, porta tellus eu, placerat odio.",
       "vazno": false
     }
-
   ],
   "donacije": [
     {
@@ -71,24 +70,24 @@
     {
       "id": 1,
       "ime": "Garfield",
-      "vrsta": "Mačka",
+      "vrsta": "pas",
       "photo": "https://paradepets.com/.image/t_share/MTkxMzY1Nzg4NjczMzIwNTQ2/cutest-dog-breeds-jpg.jpg",
-      "cip": false,
+      "cip": true,
       "godine": 44,
       "opis": "Voli lazanje",
       "pregled": "29-3-2023",
-      "udomljen": true
+      "udomljen": false
     },
     {
       "id": 2,
       "ime": "Lori",
-      "vrsta": "Mačka",
+      "vrsta": "Pas",
       "photo": "https://images.squarespace-cdn.com/content/v1/5ca7884cc46f6d78a80f81ab/1612206764757-WYI3KFLNNKQ2M8KOJ12X/image-asset.jpeg?format=2500w",
-      "cip": true,
+      "cip": false,
       "godine": "3",
       "opis": "Više od običnog psa",
       "pregled": "2023-03-09",
-      "udomljen": false
+      "udomljen": true
     },
     {
       "id": 3,
@@ -110,7 +109,7 @@
       "godine": 50,
       "opis": "Slatkica",
       "pregled": "2000-02-13",
-      "udomljen": true
+      "udomljen": false
     },
     {
       "id": 5,
@@ -136,13 +135,13 @@
     },
     {
       "ime": "Loki",
-      "vrsta": "Pas",
+      "vrsta": "Mačka",
       "photo": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA15Id3X.img?h=630&w=1200&m=6&q=60&o=t&l=f&f=jpg",
       "cip": false,
       "godine": "4",
       "opis": "Treba puno pažnje. ",
       "pregled": "",
-      "udomljen": false,
+      "udomljen": true,
       "id": 7
     },
     {
@@ -153,7 +152,7 @@
       "godine": "",
       "opis": "Pronađeni na području Strobreča. Potreban privremeni dom.",
       "pregled": "2023-04-03",
-      "udomljen": false,
+      "udomljen": true,
       "id": 8
     }
   ],
