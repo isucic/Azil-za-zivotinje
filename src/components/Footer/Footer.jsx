@@ -29,7 +29,7 @@ function Footer(){
                 </li>
                 }
             </ul>
-            <p>Company Name</p>
+            <p>Šapica</p>
             </div>
 
             <div className={fo.footerRight}>

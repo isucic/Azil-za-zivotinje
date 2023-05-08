@@ -2,8 +2,9 @@ import styles from './Filters.module.css'
 function Filters({vratiUParent, vratiStatus}){
 
     const vrsta = [
-        {ime: "Mačka", id:2},
-        {ime: "Pas", id:3}
+        {ime: "Mačka", id:1},
+        {ime: "Pas", id:2},
+        {ime: "Ostalo", id:3}
     ]
     const status = [
         {naziv: "udomljen", id: 1},

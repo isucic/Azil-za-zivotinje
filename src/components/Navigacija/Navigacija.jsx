@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import styles from './Navigacija.module.css'
-import logo from '../images/shelter.png'
-import { useContext, useState } from "react"
+import logo from '../images/icon.svg'
+import { useContext } from "react"
 import Toggle from '../ToggleSwitch/Toggle'
 import userContext from "../../context/userContext"
 

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import styles from './PhotoSlider.module.css'
 function ImageSlider({slides}){
+
     const [currentIndex, setCurrentIndex] = useState(0)
     const slideStyles = {
         width: '100%',

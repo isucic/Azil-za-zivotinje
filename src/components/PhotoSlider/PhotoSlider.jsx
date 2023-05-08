@@ -1,5 +1,6 @@
 import ImageSlider from "./ImageSlider"
 import styles from './PhotoSlider.module.css'
+
 function PhotoSlider(){
 
     const slides=[
