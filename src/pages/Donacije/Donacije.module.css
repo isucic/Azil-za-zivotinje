@@ -34,3 +34,7 @@ table td {
 thead th {
     border-bottom: 1px solid black;
   }
+
+td button {
+    margin-right: 5px;
+}

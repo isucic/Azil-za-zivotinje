@@ -125,7 +125,7 @@
     },
     {
       "ime": "Asi",
-      "vrsta": "",
+      "vrsta": "Pas",
       "photo": "https://media.glamour.com/photos/56959a2293ef4b09520d6393/master/w_1600%2Cc_limit/home-2015-10-8-cute-shelter-dogs-delaware-1023-courtesy-petfinder-main.jpg",
       "cip": true,
       "godine": "",
@@ -136,18 +136,18 @@
     },
     {
       "ime": "Loki",
-      "vrsta": "",
+      "vrsta": "Pas",
       "photo": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA15Id3X.img?h=630&w=1200&m=6&q=60&o=t&l=f&f=jpg",
       "cip": false,
       "godine": "4",
       "opis": "Treba puno pažnje. ",
       "pregled": "",
-      "udomljen": true,
+      "udomljen": false,
       "id": 7
     },
     {
       "ime": "Lada, Vihor i Lobel",
-      "vrsta": "",
+      "vrsta": "Mačka",
       "photo": "https://hips.hearstapps.com/hmg-prod/images/kittens-sitting-in-cage-at-animal-shelter-royalty-free-image-1589830343.jpg",
       "cip": false,
       "godine": "",

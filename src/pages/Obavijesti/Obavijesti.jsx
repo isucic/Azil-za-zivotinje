@@ -33,9 +33,9 @@ function Obavijesti(){
 
     return(
         <div className={styles.obavijestiPage}>
-            <button onClick={() => setOpenModal(true)}>Nova obavijest</button>
             <ModalNovaObavijest open={openModal} onClose={() => setOpenModal(false)}/>
             <h1>Obavijesti</h1>
+            <button onClick={() => setOpenModal(true)}>Nova obavijest</button>
             <div className={styles.listaObavijesti}>
                 {obavijesti.sort((a, b) => new Date(b.datum) - new Date(a.datum)).map(obavijest => (
                     <div className={styles.obavijest} key={obavijest.id}>
