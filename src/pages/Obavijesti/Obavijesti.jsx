@@ -1,18 +1,35 @@
-import { useEffect,useState } from 'react'
+import { useContext, useEffect,useState } from 'react'
 import styles from './Obavijesti.module.css'
 import axios from 'axios'
 import ModalNovaObavijest from '../../components/ModalNovaObavijest/ModalNovaObavijest';
+import userContext from '../../context/userContext';
+import { FaTrash } from 'react-icons/fa';
+
+
 
 function Obavijesti(){
 
+    const user = useContext(userContext)
+
     const [openModal, setOpenModal] = useState(false);
     const [obavijesti,setObavijesti] = useState([])
+    const [refresh, setRefresh] = useState(true);
+
     useEffect(() => {
+        if(refresh){
         axios
          .get("http://localhost:3001/obavijesti")
          .then(res => setObavijesti(res.data))
          .catch(err => console.log(err))
-    },[])
+         setRefresh(false);
+        }
+    },[refresh])
+
+    const handleIzbrisiObavijest = (id) => {
+        axios
+         .delete(`http://localhost:3001/obavijesti/${id}`)
+         .then(res => setRefresh(true))
+    }
 
     return(
         <div className={styles.obavijestiPage}>
@@ -30,6 +47,11 @@ function Obavijesti(){
                         <div className={styles.tekst}>
                             <p>{obavijest.tekst}</p>
                         </div>
+
+                        {user && 
+                        <div className={styles.izbrisiBtn}>
+                            <FaTrash className={styles.fatrash} onClick={() => handleIzbrisiObavijest(donacija.id)}/>
+                         </div>}
                 </div>
                 ))}
                 
