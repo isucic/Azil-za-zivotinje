@@ -21,7 +21,7 @@ function Footer(){
                     <Link to="/obavijesti" className={fo.footerLink}>Obavijesti</Link>
                 </li>
                 <li>
-                    <Link to="/popiszivotinja" className={fo.footerLink}>Životinje</Link>
+                    <Link to="/zivotinje" className={fo.footerLink}>Životinje</Link>
                 </li>
                 {user && 
                 <li>
