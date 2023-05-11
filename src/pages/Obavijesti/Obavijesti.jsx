@@ -50,8 +50,8 @@ function Obavijesti(){
 
                         {user && 
                         <div className={styles.izbrisiBtn}>
-                            <FaTrash className={styles.fatrash} onClick={() => handleIzbrisiObavijest(donacija.id)}/>
-                         </div>}
+                            <FaTrash className={styles.fatrash} onClick={() => handleIzbrisiObavijest(obavijest.id)}/>
+                        </div>}
                 </div>
                 ))}
                 

@@ -53,7 +53,7 @@
     },
     {
       "id": 4,
-      "kategorija": "trazi",
+      "kategorija": "donirano",
       "tip": "Veterinar",
       "vrijednost": 30,
       "opis": "Cjepivo"
@@ -71,6 +71,13 @@
       "vrijednost": "8",
       "opis": "Dvostruki konop",
       "id": 9
+    },
+    {
+      "tip": "Veterinar",
+      "vrijednost": 30,
+      "opis": "Cjepivo",
+      "kategorija": "trazi",
+      "id": 10
     }
   ],
   "zivotinje": [
