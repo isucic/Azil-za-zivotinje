@@ -6,10 +6,10 @@ function ImageSlider({slides}){
     const slideStyles = {
         width: '100%',
         height: "100%",
-        borderRadius: "10px",
         backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundImage: `url(${slides[currentIndex].url})`
+        // backgroundSize: "cover",
+        // backgroundImage: `url(${slides[currentIndex].url})`
+        background: `url(${slides[currentIndex].url}) no-repeat center 30% / cover`
     }
     
     const goToPrevious = () => {

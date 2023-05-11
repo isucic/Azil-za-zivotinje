@@ -46,7 +46,7 @@ function PopisZivotinja(){
         setFilter("")
         setStatus("")
     }
-  
+
     return(
         <div className={styles.popisZivotinja}>
             <div className={styles.sideBar}>
