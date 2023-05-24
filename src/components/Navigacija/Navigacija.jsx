@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom"
 import styles from './Navigacija.module.css'
 import logo from '../images/icon.svg'
-import { useContext } from "react"
+import { useContext,useState } from "react"
 import Toggle from '../ToggleSwitch/Toggle'
 import userContext from "../../context/userContext"
+import Login from "../../pages/Login/Login"
 
 function Navigacija({action}){
+
+    const [login,setLogin] = useState(false)
+    const handleLogin = () => {
+        console.log("Botun")
+        setLogin(true)
+    }
 
     const user = useContext(userContext)
     return(
@@ -32,7 +39,7 @@ function Navigacija({action}){
             </ul>
 
             <div className={styles.navbarLogin}>
-                {/* <Link to="/" className={styles.login}>Login</Link> */}
+                <Link to="/login" className={styles.login}>Login</Link>
                 <p>Admin</p>
                 <Toggle onChange={action}/>
             </div>

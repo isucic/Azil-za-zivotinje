@@ -8,7 +8,10 @@
     padding: 10px 5px;
     box-shadow: 0px 0px 15px 0px rgba(189, 188, 188, 0.75); 
     /* box-sizing: border-box; */
-
+    border: 1px solid black;
+}
+.zivotinjaCard:hover {
+    border: 1px solid red;
 }
 .photoFrame {
     width: 100%;

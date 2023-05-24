@@ -5,6 +5,7 @@ import Donacije from './pages/Donacije/Donacije'
 import Obavijesti from './pages/Obavijesti/Obavijesti'
 import PopisZivotinja from './pages/PopisZivotinja/PopisZivotinja'
 import UnosNoveZivotinje from './pages/UnosNoveZivotinje/UnosNoveZivotinje'
+import Login from './pages/Login/Login'
 import Navigacija from './components/Navigacija/Navigacija'
 import Footer from './components/Footer/Footer'
 import userContext from './context/userContext'
@@ -29,6 +30,8 @@ function App() {
         <Route path="/obavijesti" element={<Obavijesti />} />
         <Route path="/zivotinje" element={<PopisZivotinja />} />
         <Route path="/unosnovezivotinje" element={user ? <UnosNoveZivotinje /> : <p>Niste ovlašteni za ovu pristup stranici</p>} />
+        <Route path="/login" element={<Login /> } />
+        <Route path="/noviracun" element={<Login /> } />
       </Routes>
       </div>
 
