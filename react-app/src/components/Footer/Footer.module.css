@@ -8,13 +8,11 @@
     padding: 30px 150px;
   }
   
-  /* Footer links */
   .footerLeft {
     display:inline-block;
   }
   .footerLinks {
     font-size: 14px;
-    /* font-weight: bold; */
     color: #ffffff;
     padding: 0;
     transition: ease .25s;
@@ -63,3 +61,17 @@
   .footerRight a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
   
   .footerLinks a:hover{text-decoration:underline;}
+
+  @media (max-width: 768px) {
+    .footer {
+      font-size: 18px;
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }

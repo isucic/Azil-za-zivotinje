@@ -39,3 +39,20 @@ thead th {
 td button {
     margin-right: 5px;
 }
+
+@media (max-width: 768px) {
+    .donacije {
+        flex-direction: column;
+    }
+    .donacije select,
+    .donacije input,
+    .donacije textarea {
+        width: 100%;
+    }
+    .popisVrstaDonacija {
+        flex-basis: auto;
+    }
+    table {
+        width: 100%;
+    }
+}

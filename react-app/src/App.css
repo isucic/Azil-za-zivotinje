@@ -20,7 +20,7 @@ h1 {
 .pages {
   margin: 0 150px;
   display: flex;
-  /* border: 1px solid black; */
+  /* justify-content: center; */
 }
 
 .footer {
@@ -55,4 +55,19 @@ button:hover {
 
 input {
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .App {
+    display: flex;
+    margin: 0;
+  }
+  .pages {
+    margin: 0 20px; /* Prilagođene margine na manjim ekranima */
+    justify-content: center; /* Poravnanje na sredinu na manjim ekranima */
+  }
+
+  .footer {
+    font-size: 18px;
+  }
 }

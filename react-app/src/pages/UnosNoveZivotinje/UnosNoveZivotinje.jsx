@@ -96,7 +96,7 @@ function UnosNoveZivotinje(){
                     />
 
                     <div className={styles.dateBox}>
-                        <p>Datum</p>
+                        <p>Pregled</p>
                         <input
                             type="date"
                             name="checkup"
